@@ -1,4 +1,4 @@
-'''simple_number = input('simple_number = ')
+simple_number = input('simple_number = ')
 count = 0
 for i in range(int(simple_number)):
     if i and int(simple_number) % int(i) == 0:
@@ -20,9 +20,9 @@ print('result = ' + str(result))
 if int(result) == int(buffer):
     print('palindrome')
 else:
-    print('not palindrome')'''
+    print('not palindrome')
 
-'''count_numbers = int(input('count = '))
+count_numbers = int(input('count = '))
 buffer1 = 1
 buffer2 = 1
 for numbers in range(count_numbers - 2):
@@ -30,7 +30,7 @@ for numbers in range(count_numbers - 2):
     print('buffer1 = ' + str(buffer1))
     buffer2 = buffer1 - buffer2
 result = buffer1
-print(result)'''
+print(result)
 
 money_int = int(input('money_int = '))
 money_cent = int(input('money_change = '))
