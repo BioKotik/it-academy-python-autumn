@@ -15,7 +15,6 @@ while palindrome:
     decimal_part = int(palindrome) % 10
     palindrome = int(palindrome) // 10
     result = result * 10 + int(decimal_part)
-#result = result // 10
 print('result = ' + str(result))
 if int(result) == int(buffer):
     print('palindrome')
@@ -33,7 +32,7 @@ result = buffer1
 print(result)
 
 money_int = int(input('money_int = '))
-money_cent = int(input('money_change = '))
+money_cent = int(input('money_cent = '))
 count_product = int(input('count_product = '))
 money_int *= count_product
 money_cent *= count_product
