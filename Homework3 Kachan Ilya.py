@@ -7,7 +7,7 @@ word_w_max_len = words[0]
 for word in range(len(words)):
     if len(str(word_w_max_len)) < len(words[word]):
         word_w_max_len = words[word]
-print('Слово с максимальной длиной - ' + '"' + str(word_w_max_len) + '"')
+print('Слово с максимальной длиной = ' + '"' + str(word_w_max_len) + '"')
 
 uppers = 0
 lowers = 0
