@@ -39,4 +39,4 @@ money_cent *= count_product
 while money_cent >= 100:
     money_cent -= 100
     money_int += 1
-print('Общая цена ' + str(money_int) + ' рублей ' + str(money_cent) + ' копеек')
+print('Общая цена ' + str(money_int) + ' рублей ' + str(money_cent) + '  копеек')
