@@ -1,13 +1,15 @@
-"""Define a dict comprehension which returns a dictionary where the keys are numbers between 1 and n
-(both included) and the values are square of keys. Define a code which count and return the numbers
-of each character in a count_me_string argument."""
+"""Define a dict comprehension which returns a dictionary where the keys are
+numbers between 1 and n (both included) and the values are square of keys.
+Define a code which count and return the numbers of each character in
+a count_me_string argument."""
 
 n = int(input("Введите кол-во чисел "))
 dct = {(a, a**2) for a in range(n) if a > 0}
 print(dct)
 
-"""Задача. Дан текст (строк может быть много, разделенных \n). Выведите слово, которое в этом
-тексте встречается чаще всего. Если таких слов несколько, выведите то, которое меньше в
+"""Задача. Дан текст (строк может быть много, разделенных \n).
+Выведите слово, которое в этом тексте встречается чаще всего.
+Если таких слов несколько, выведите то, которое меньше в
 лексикографическом порядке."""
 
 string = input("Введите строку - ")
@@ -20,7 +22,8 @@ for item in dct.values():
     if item == maxvalue:
         print(item)
 
-"""Задача Дан список стран и городов каждой страны. Затем даны названия городов.
+"""Задача Дан список стран и городов каждой страны. 
+Затем даны названия городов.
 Для каждого города укажите, в какой стране он находится."""
 
 number = int(input('Введите кол-во стран'))
@@ -41,15 +44,16 @@ for i in range(number_cities):
 for city in city:
     print(dct1.get(city))
 
-"""Даны два списка чисел. Посчитайте, сколько чисел содержится одновременно как в первом списке,
-так и во втором."""
+"""Даны два списка чисел. Посчитайте, сколько чисел содержится одновременно
+как в первом списке,так и во втором."""
 
 lst1 = [1, 2, 5, 7, 12]
 lst2 = [3, 5, 1, 4, 10, 12, 15]
 lst3 = set(lst1) & set(lst2)
 print(lst3)
 
-"""Даны два списка чисел. Посчитайте, сколько чисел входит только в один из этих списков."""
+"""Даны два списка чисел. Посчитайте, сколько чисел входит 
+только в один из этих списков."""
 
 lst4 = set(lst1) - set(lst2)
 print(lst4)
