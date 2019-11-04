@@ -13,47 +13,53 @@ print(dct)
 лексикографическом порядке."""
 
 string = input("Введите строку - ")
-dct = dict()
+dict_of_words = dict()
+
+marks = ",.!?:;()[]{}#$%^&*+-/|><="
+for mark in marks:
+    string = string.replace(mark, ' ')
+string = string.split()
+
 for item in string:
-    dct[item] = dct.get(item, 0) + 1
-print(dct)
-maxvalue = int(max(dct.values()))
-for item in dct.values():
-    if item == maxvalue:
-        print(item)
+    dict_of_words[item] = dict_of_words.get(item, 0) + 1
+print(dict_of_words)
+
+list_of_max = []
+maxvalue = int(max(dict_of_words.values()))
+for key in dict_of_words.keys():
+    if dict_of_words[key] == maxvalue:
+        list_of_max.append(key)
+list_of_max = sorted(list_of_max)
+print(list_of_max[0])
 
 """Задача Дан список стран и городов каждой страны.
 Затем даны названия городов.
 Для каждого города укажите, в какой стране он находится."""
 
-number = int(input('Введите кол-во стран'))
-dct1 = dict()
-for towns in range(number):
-    print("Введите страну и города")
-    string = input().split(" ")
-    key = string[0]
-    string.remove(string[0])
-    dct2 = {key: string}
-    dct1.update(dct2)
+number = int(input('Введите количество стран'))
+county_n_cities = {}
+for i in range(number):
+    country, *cities = input('Ввдеите страну и его города ').split()
+    for city in cities:
+        county_n_cities[city] = country
 
-number_cities = int(input('Введите кол-во городов'))
-city = []
-print('Введите города, которые хотите вывести')
-for i in range(number_cities):
-    city.append(input())
-for city in city:
-    print(dct1.get(city))
+number = int(input('Введите количество городов, которые хотите вывести'))
+list_city = []
+for i in range(number):
+    print('Введите город')
+    list_city.append(input())
+for city in list_city:
+    print(county_n_cities.get(city))
 
 """Даны два списка чисел. Посчитайте, сколько чисел содержится одновременно
 как в первом списке,так и во втором."""
 
 lst1 = [1, 2, 5, 7, 12]
 lst2 = [3, 5, 1, 4, 10, 12, 15]
-lst3 = set(lst1) & set(lst2)
-print(lst3)
+
+print(len(set(lst1) & set(lst2)))
 
 """Даны два списка чисел. Посчитайте, сколько чисел входит
 только в один из этих списков."""
 
-lst4 = set(lst1) - set(lst2)
-print(lst4)
+print(len(set(lst1) ^ set(lst2)))
