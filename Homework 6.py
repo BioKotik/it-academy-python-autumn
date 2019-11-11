@@ -73,8 +73,38 @@ def the_most_meets_word():
     return list_of_max[0]
 
 
+def union_numbers(lst_of_numbers):
+    result = list()
+    result.append(lst_of_numbers[0])
+    range_str = ''
+    for i in lst_of_numbers[1:]:
+        if i - result[-1] == 1:
+            if len(result) == 1:
+                result.append(i)
+            elif len(result) == 2:
+                result[-1] = i
+        else:
+            range_str += '-'.join(map(str, result)) + ', '
+            result.clear()
+            result.append(i)
+    range_str += '-'.join(map(str, result))
+    print(range_str)
+
+
+"""Оформите решение задач из прошлых домашних работ в функции.
+Напишите функцию runner. runner() – все фукнции вызываются по очереди
+runner(‘gen_numbers’) – вызывается только функцию gen_numbers. 
+runner(‘func’, ‘func1’...) - вызывает все переданные функции 
+"""
 runner()
 runner(is_palindrome)
 runner(is_palindrome, square)
 
+"""Создайте декоратор, который хранит в файле результаты вызовы
+функций (за все время, не только текущий запуск программы)"""
 the_most_meets_word()
+
+"""Реализовать функцию get_ranges которая получает на вход
+непустой список неповторяющихся целых чисел, отсортированных
+по возрастанию, которая этот список “сворачивает”"""
+union_numbers([1, 2, 3, 4, 6, 7, 8, 12, 14, 15, 17, 20])
