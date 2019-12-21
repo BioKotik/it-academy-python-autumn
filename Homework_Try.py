@@ -3,7 +3,7 @@ try:
     num2 = 0
     print(num1 / num2)
 except ZeroDivisionError:
-    print("Попытка деления на 0")
+    print("Попытка деления на ноль")
 
 
 def print_list_element(the_list, index):
